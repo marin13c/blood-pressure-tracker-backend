@@ -26,7 +26,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/api/records", recordsRoutes);
+app.use("/records", recordsRoutes);
 
 const start = async () => {
   await connectDB(process.env.MONGO_URI);
